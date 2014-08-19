@@ -15,16 +15,21 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class MyActivity extends Activity implements View.OnClickListener {
-
+    /**
+     * Wear-Keyboard, Activity-Based Keyboard for Android Wear.
+     * Built by Ido Ideas, 2014.
+     * This code is Open Source and free to use.
+     */
     private TextView mTextView;
-    private EditText editText;
-    static Button del,space, num, cap;
+    static EditText editText;
+    static Button del,space, num, cap, OK;
    RelativeLayout Scroll;
 static String letters = "abcdefghijklmnopqrstuvwxyz";
     static String capitalletters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     static String numbers = "1234567890";
     ArrayList<Button> buttons = new ArrayList<Button>();
     private boolean Capital = false;
+    static String TextInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +42,9 @@ del = (Button) findViewById(R.id.backspace);
         del.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (editText.getText().toString().length()>0){
-                editText.setText(editText.getText().toString().substring(0, editText.getText().length() - 1));}
+                if (editText.getText().toString().length() > 0) {
+                    editText.setText(editText.getText().toString().substring(0, editText.getText().length() - 1));
+                }
             }
         });
         del.setOnTouchListener(new View.OnTouchListener() {
@@ -88,6 +94,18 @@ del = (Button) findViewById(R.id.backspace);
                 }
             }
         });
+        OK = (Button) findViewById(R.id.send);
+        OK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextInput = editText.getText().toString();
+                /*****
+                 * Here is where you use the text inserted.
+                 * TextInput is the variable with the text that the user put inside.
+                 * Its a static.
+                 */
+            }
+        });
     }
 
     @Override
@@ -134,6 +152,7 @@ public void setKeyboardCharacters(String Characters){
                 vi.vibrate(50);
                 Button button = (Button) v;
                 editText.setText(editText.getText()+""+button.getText());
+
             }
         });
             Scroll.addView(currentButton);
