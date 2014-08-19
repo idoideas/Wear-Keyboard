@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyActivity"
+    android:id="@+id/Relative"
+    android:verticalScrollbarPosition="left"
+    tools:deviceIds="wear_square">
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+
+        android:id="@+id/backspace"
+        android:text="D"
+        />
+    <EditText
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:hint="write text"
+android:layout_below="@id/backspace"
+        android:id="@+id/textedit"
+        android:ellipsize="end"
+        android:textColor="@android:color/black"
+        android:textColorHint="#55000000"/>
+    <Button
+        android:layout_width="55dp"
+        android:layout_height="60dp"
+        android:layout_toRightOf="@id/textedit"
+android:layout_alignTop="@id/textedit"
+
+        android:id="@+id/send"
+        android:text="ok"
+        />
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:layout_toRightOf="@id/backspace"
+        android:id="@+id/space"
+        android:text="_"
+        />
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:layout_toRightOf="@id/space"
+        android:id="@+id/numbers"
+        android:text="123"
+        android:textSize="7sp"
+        />
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:layout_toRightOf="@id/numbers"
+        android:id="@+id/capital"
+        android:text="^"
+
+        />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollview"
+    android:scrollbarAlwaysDrawHorizontalTrack="true"
+    android:layout_below="@id/textedit">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/scroll">
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
