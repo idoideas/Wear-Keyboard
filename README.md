@@ -16,17 +16,17 @@ If it doesn't opened automatically on the watch after running, Just using the vo
 How to implement it in my app?
 =============
 
-1.Download and add "rect_activity_main.xml" (https://github.com/idoideas/Wear-Keyboard/blob/master/src/main/res/layout/rect_activity_my.xml) to your project's layout folder.
+1. Download and add "rect_activity_main.xml" (https://github.com/idoideas/Wear-Keyboard/blob/master/src/main/res/layout/rect_activity_my.xml) to your project's layout folder.
 
-2.Download and add "MyActivity.java" (https://github.com/idoideas/Wear-Keyboard/blob/master/src/main/java/idoideas/com/keyboard/MyActivity.java) to your project's java folder.
+2. Download and add "MyActivity.java" (https://github.com/idoideas/Wear-Keyboard/blob/master/src/main/java/idoideas/com/keyboard/MyActivity.java) to your project's java folder.
 
-3.Add "android.permission.VIBRATE" permission to your project's AndroidManifest.xml.
+3. Add "android.permission.VIBRATE" permission to your project's AndroidManifest.xml.
 
-4.Add activity attributes in your AndroidManifest.xml as you wish (Example: https://github.com/idoideas/Wear-Keyboard/blob/master/src/main/AndroidManifest.xml).
+4. Add activity attributes in your AndroidManifest.xml as you wish (Example: https://github.com/idoideas/Wear-Keyboard/blob/master/src/main/AndroidManifest.xml).
 
-5.Start "MyActivity" activity whenever you want to open the keyboard. (For example, When you click a button or clicking an EditText)
+5. Start "MyActivity" activity whenever you want to open the keyboard. (For example, When you click a button or clicking an EditText)
 
-6.Use the "OK" button's "OnClickListener" (And the string "TextInput") in "MyActivity.java" to use the the text that the user typed.
+6. Use the "OK" button's "OnClickListener" (And the string "TextInput") in "MyActivity.java" to use the the text that the user typed.
 
 It's that simple.
 
