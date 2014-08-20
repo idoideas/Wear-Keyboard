@@ -5,7 +5,6 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.TypedValue;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -57,16 +56,6 @@ del = (Button) findViewById(R.id.backspace);
                 if (editText.getText().toString().length() > 0) {
                     editText.setText(editText.getText().toString().substring(0, editText.getText().length() - 1));
                 }
-            }
-        });
-        del.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (editText.getText().toString().length()>0){
-                    editText.setText(editText.getText().toString().substring(0, editText.getText().length() - 1));
-                    android.os.SystemClock.sleep(100);
-                }
-                return false;
             }
         });
         space = (Button) findViewById(R.id.space);
