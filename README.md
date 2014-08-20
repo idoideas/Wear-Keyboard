@@ -7,6 +7,15 @@ Currently supporting only rectangular watches, Support for round watches will co
 
 Tested on LG G Watch, 2014.
 
+ScreenShots
+=============
+
+http://i.imgur.com/V3ymJ6n.png
+
+http://i.imgur.com/iWaXlj9.png
+
+http://i.imgur.com/8fQr0Jm.png
+
 How can I test it before I implement this?
 =============
 This Github repo is also an Example project. Fork this project and open it with Android Studio or InteliJ. Connect your Android Wear watch to PC using their adapters, And run the app.
