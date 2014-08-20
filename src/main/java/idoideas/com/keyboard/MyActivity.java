@@ -37,6 +37,18 @@ static String letters = "abcdefghijklmnopqrstuvwxyz";
         setContentView(R.layout.rect_activity_my);
         Scroll = (RelativeLayout) findViewById(R.id.scroll);
         editText = (EditText) findViewById(R.id.textedit);
+        OK = (Button) findViewById(R.id.send);
+        OK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextInput = editText.getText().toString();
+                /*****
+                 * Here is where you use the text inserted.
+                 * TextInput is the variable with the text that the user put inside.
+                 * Its a static.
+                 */
+            }
+        });
 setKeyboardCharacters(letters);
 del = (Button) findViewById(R.id.backspace);
         del.setOnClickListener(new View.OnClickListener() {
@@ -94,18 +106,7 @@ del = (Button) findViewById(R.id.backspace);
                 }
             }
         });
-        OK = (Button) findViewById(R.id.send);
-        OK.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TextInput = editText.getText().toString();
-                /*****
-                 * Here is where you use the text inserted.
-                 * TextInput is the variable with the text that the user put inside.
-                 * Its a static.
-                 */
-            }
-        });
+
     }
 
     @Override
