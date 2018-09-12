@@ -35,7 +35,7 @@ How to implement it in my app?
 
 5. Start "MyActivity" activity whenever you want to open the keyboard. (For example, When you click a button or clicking an EditText)
 
-6. Use the "OK" button's "OnClickListener" (And the string "TextInput") in "MyActivity.java" to use the the text that the user typed.
+6. Use the "OK" button's "OnClickListener" (And the string "TextInput") in "MyActivity.java" to use the text that the user typed.
 
 It's that simple.
 
